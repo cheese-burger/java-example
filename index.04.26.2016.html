@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue1647 Class Example 4-Ultimate BBQ</title>
+<script language="JavaScript">
+var i = 0;
+var path = new Array();
+ 
+// LIST OF IMAGES
+path[0] = "images/rib1.jpg";
+path[1] = "images/rib2.jpg";
+path[2] = "images/rib3.jpg";
+path[3] = "images/rib4.jpg";
+function swapImage()
+{
+   document.slide.src = path[i];
+   if(i < path.length - 1) i++; else i = 0;
+   setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+</script>
+<style>
+html {
+	overflow: hidden;
+	height: 100%;
+	background: #bcbdc7;
+}
+body {
+	overflow: auto;
+	height: 100%;
+	width: 1100px;
+	margin: 0 auto; /* center */
+	padding:5px;
+	border: 1px solid #474747;
+	border-width: 0 3px;
+	background: #fff;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/*Tynan recognized that each div element had a specific function, address is the menu bar*/
+
+#container-header {
+  float:left; 
+  background-color:#fff;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height:500px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#address{
+	float:right;
+	width:100%;
+  padding:0;
+  background-color: #930;
+	margin:auto;
+}
+#address li{
+	float:right;
+	width:auto;
+	display:block;
+	padding:0px;
+  background:#930;
+  border-left: 2px solid #fff;
+  text-decoration:none;
+  list-style:none;     
+}
+#address li a{
+	float:right;
+	width:auto;
+	color:#fff;
+	font-size:12px;
+	padding:10px 24px;
+  background:#930;
+  text-decoration:none;
+  list-style:none;
+}
+
+#address li a:hover{
+	float:right;
+	font-size:12px;
+	padding:10px 24px;
+  text-decoration:none;
+  list-style:none;
+  background:#BCBDC7;
+  color:#161956;
+}
+
+#address li a.active{
+	float:right;
+	font-size:12px;
+	padding:10px 24px;
+  text-decoration:none;
+  list-style:none;
+  background:#161956;
+  color:white;
+}
+#address form{
+	width: auto;
+	color:#fff;
+	font-size:14px;
+	padding:6px 0px;
+	font-size:12px;
+	text-align: center;
+    background:#930;
+}
+.row{
+  width:auto;
+  float: left;
+  height: auto;
+  margin-left: 5px;
+}
+.container {
+  width:500px;
+  margin: 10px 10px 0 12px;
+  padding: 5px; 
+  float:left; 
+  background:#fff;
+  border: 3px solid #930;
+}
+
+  h1, h2, h3, h4, h5, h6{
+  width: auto;
+  height: 20px;
+  padding-bottom:5px;
+  text-align: center;
+  background-color: #930;
+  color: #BCBDC7; 
+}
+.picture{
+  float: left;
+  margin: 10px 0px 10px 20px;
+  border: #930;
+  text-align: right;
+}
+.sign{
+  float: left;
+  margin: 10px 0px 10px 5px;
+  width: 1100px;
+  border: #930;
+  position: center;
+  text-align: center;
+}
+.sign-text{
+  float: left;
+  margin: 10px 0px 10px 0px;
+  padding-top: 125px;
+  border: #930;
+  font-size: 300%;
+  font-weight: bold;
+  color: #930;
+  text-align: center;
+}
+p.text {
+	margin-left: 15px;
+}
+footer{
+  width: 100%;
+  height: 100px;
+  clear: both;
+  padding:10px;
+  background-color: #930;
+  color: #fff;
+  text-align: center;
+}
+
+footer ul{
+  text-align: center;
+}
+
+footer li{
+  float:left;
+  width:150px;
+  height: 35px;
+  display:block;
+  padding:0px 3px 3px 0px;
+  text-decoration:none;
+  list-style:none;
+  text-align: center;    
+}
+footer p{
+  text-align: center;
+}
+/*removed background image and added padding top to move the text content. increased font to 16px made bolder with text align*/
+footer li a{
+  float:left;
+  width:150px;
+  padding-top: 20px;
+  height: 35px;
+  color:#fff;
+  font-size:16px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration:none;
+  list-style:none;
+}
+/*background hover image is here */
+footer li a:hover{
+  float:left;
+  width:150px;
+  height: 35px;
+  padding-top: 20px;
+  color:#f00;
+  font-size:16px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration:none;
+  list-style:none;
+}
+</style>
+
+</head>
+<body>
+ <body onload="nickchanger('nick');">   
+<ul id="address">
+  	
+				<li><a class="active" href="index.html">Index</a></li>
+				<li><a href="index.html">Index 1</a></li>
+				<li><a href="index.html">Index 2</a></li>
+				<li><a href="index.html">Index 3</a></li>
+				<li><a href="index.html">Index 4</a></li>
+				<li><IMG SRC="images/imageclock/digitblank.gif" height="30px" border=0 name="hourstens"><IMG SRC="images/imageclock/digitblank.gif" border=0 height="30px" name="hoursones"><IMG SRC="images/imageclock/digitblank.gif" height="30px" border=0 name="colon"><IMG SRC="images/imageclock/digitblank.gif" height="30px" border=0 name="minstens"><IMG SRC="images/imageclock/digitblank.gif" height="30px" border=0 name="minsones"><IMG SRC="images/imageclock/digitblank.gif" height="30px" border=0 name="ampm"></li>
+			</ul>
+<SCRIPT LANGUAGE="JavaScript">
+
+  if (document.images) { 
+    digit1 = new Image; 
+    digit1.src = "images/imageclock/digit1.gif"; 
+  digit2 = new Image; 
+    digit2.src = "images/imageclock/digit2.gif";
+  digit3 = new Image; 
+    digit3.src = "images/imageclock/digit3.gif";
+  digit4 = new Image; 
+    digit4.src = "images/imageclock/digit4.gif";
+  digit5 = new Image; 
+    digit5.src = "images/imageclock/digit5.gif";
+  digit6 = new Image; 
+    digit6.src = "images/imageclock/digit6.gif";
+  digit7 = new Image; 
+    digit7.src = "images/imageclock/digit7.gif";
+  digit8 = new Image; 
+    digit8.src = "images/imageclock/digit8.gif";
+  digit9 = new Image; 
+    digit9.src = "images/imageclock/digit9.gif";
+  digit0 = new Image; 
+    digit0.src = "images/imageclock/digit0.gif";
+  digitam = new Image; 
+    digitam.src = "images/imageclock/digitam.gif";
+  digitpm = new Image; 
+    digitpm.src = "images/imageclock/digitpm.gif";
+  digitcolon = new Image;
+  digitcolon.src = "images/imageclock/digitcolon.gif";
+  digitblank = new Image;
+  digitblank.src = "images/imageclock/digitblank.gif";
+  }
+  
+function UpdateClock(){
+    var time= new Date();
+    hours = time.getHours();
+    mins = time.getMinutes();
+    if (!document.images) return;
+  digit = mins % 10;
+    document.images.minsones.src=eval("digit"+digit+".src");
+  digit = (mins - (mins % 10))/10;
+  document.images.minstens.src=eval("digit"+digit+".src");
+  if (hours > 12)
+    document.images.ampm.src=digitpm.src;
+  else
+    document.images.ampm.src=digitam.src;
+  if (hours > 12) hours = hours - 12;
+  digit = hours % 10;
+  document.images.hoursones.src=eval("digit"+digit+".src");
+  digit = (hours - (hours % 10))/10;
+  document.images.hourstens.src=eval("digit"+digit+".src");
+  document.images.colon.src=digitcolon.src;
+  setTimeout("UpdateClock()",30000);
+
+  }
+
+   UpdateClock();
+</SCRIPT>
+</div>
+
+<div id="container-header"><img height="500" name="slide" src="images/rib1.jpg" width="100%" />	
+  
+</div>
+<!--close navigation address-->
+<div class="row">
+<h2>Container-Open</h2>
+<div class="sign"><img src='images/neon-open-sign.png' alt='blinking!' id='blinking_image' /></div>
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+var img = document.getElementById('blinking_image');
+
+var interval = window.setInterval(function(){
+    if(img.style.visibility == 'hidden'){
+        img.style.visibility = 'visible';
+    }else{
+        img.style.visibility = 'hidden';
+    }
+}, 1000); //the 1000 here is milliseconds and determines how often the interval should be run.
+</script>
+</div>
+
+
+
+<div class="row">
+<div class="container">
+<h2>Container 1</h2>
+<img src="images/tip1.jpg" alt="Poster 1">
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
+
+</div>
+       
+
+<div class="container">
+<h2>Container 2</h2>
+<img src="images/tip2.jpg" alt="Poster 2">
+ 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
+
+</div>
+</div>
+
+<div class="row">
+<h2>Container 3</h2>
+
+ <div class="picture"><img src="images/tip3.jpg" alt="Poster 1"></div>
+ <div class="picture"><img src="images/pull1.jpg" alt="Poster 1"></div>
+ </div>
+
+<div class="row">
+<h2>Container 4</h2>
+
+ <div class="picture"><img src="images/tip4.jpg" alt="Poster 2"></div>
+ <div class="picture">	<img src="images/pull2.jpg" alt="Poster 1"></div>
+</div>
+
+<div class="row">
+<h2>Container 5</h2>
+
+ <div class="picture"><img src="images/pull3.jpg" alt="Poster 2"></div>
+ <div class="picture">	<img src="images/pull4.jpg" alt="Poster 1"></div>
+</div>
+
+
+<div class="row">
+<h2>Container 3</h2>
+
+ <div class="picture"><img src="images/potato.jpg" alt="Poster 1"></div>
+ <div class="picture"><img src="images/tip6.jpg" alt="Poster 3"></div>
+
+</div>
+
+<div class="row">
+<h2>Container Beverages Here</h2>
+
+ <div class="picture"><img name="slide" src="images/drink-sign.jpg"/></div>
+ 
+ <div class="picture"><img name="slide1" src="images/drink1.jpg"/></div>
+ <script language="JavaScript">
+var i = 0;
+var path1 = new Array();
+ 
+// LIST OF IMAGES
+path1[0] = "images/drink1.jpg";
+path1[1] = "images/drink2.jpg";
+path1[2] = "images/drink3.jpg";
+
+function swapImage()
+{
+   document.slide1.src = path1[i];
+   if(i < path1.length - 1) i++; else i = 0;
+   setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+</script>
+</div>
+
+
+
+<footer>
+<p>Class Example 6 of a Static Website &copy; Nick Curlett 2016</p>
+<ul>
+               <li><a href="index.html">Index</a></li>
+                <li><a href="index1.html">Index 1</a></li>
+                <li><a href="index2.html">Index 2</a></li>
+                <li><a href="index3.html">Index 3</a></li>
+                <li><a href="index4.html">Index 4</a></li>
+                <li><a href="index5.html">Index 5</a></li>
+                <li><a href="#">Top</a></li>
+            </ul>
+
+</footer>
+
+<script></script>
+</body>
+
+</html>
