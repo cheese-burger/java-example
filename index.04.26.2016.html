@@ -212,8 +212,8 @@ footer li a:hover{
 </head>
 
 <body>
-<body onload="rotate()">
- 
+<body onload="rotate();swapImage()">	
+
 <ul id="address">
   	
 				<li><a class="active" href="index.html">Index</a></li>
@@ -373,7 +373,6 @@ function swapImage()
    if(i < path1.length - 1) i++; else i = 0;
    setTimeout("swapImage()",3000);
 }
-window.onload=swapImage;
 </script>
 </div>
 
