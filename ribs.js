@@ -1,16 +1,15 @@
 
-var i = 0;
-var path2 = new Array();
- 
-// LIST OF IMAGES
-path2[0] = "images/rib1.jpg";
-path2[1] = "images/rib2.jpg";
-path2[2] = "images/rib3.jpg";
-path2[3] = "images/rib4.jpg";
-function swapPicture()
-{
-   document.slide2.src = path2[i];
-   if(i < path2.length - 1) i++; else i = 0;
-   setTimeout("swapPicture()",3000);
+adImages = new Array("images/rib1.jpg","images/rib2.jpg","images/rib3.jpg","images/rib4.jpg" )
+thisAd = 0
+imgCt = adImages.length
+function rotate() {
+if (document.images) {
+thisAd++
+if (thisAd == imgCt) {
+thisAd = 0
 }
-window.onload=swapPicture;
+document.adBanner.src=adImages[thisAd]
+setTimeout("rotate()", 3 * 1000)
+}
+}
+// End hide script from old browsers -->
