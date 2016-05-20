@@ -2,41 +2,24 @@
 <html>
 <head>
 	<title>Blue1647 Class Example 4-Ultimate BBQ</title>
-<script language="JavaScript1.2">
-var howOften = 5; //number often in seconds to rotate
-var current = 0; //start the counter at 0
-var ns6 = document.getElementById&&!document.all; //detect netscape 6
 
-// place your images, text, etc in the array elements here
-var items = new Array();
-   items[0]="<img alt='image0 (9K)' src='/images/rib1.jpg'/>"; //a linked image
-   items[1]="<img alt='image1 (9K)' src='/images/rib2.jpg'/>"; //a linked image
-   items[2]="<img alt='image2 (9K)' src='/images/rib3.jpg'/>"; //a linked image
-   items[3]="<img alt='image3 (9K)' src='/images/rib4.jpg'/>"; //a linked image
-   items[4]="<img alt='image4 (9K)' src='/images/rib5.jpg'/>"; //a linked image
-   items[5]="<img alt='image5 (18K)' src='/images/rib6.jpg'/>"; //a linked image
-function rotater() {
-    document.getElementById("placeholder").innerHTML = items[current];
-    current = (current==items.length-1) ? 0 : current + 1;
-    setTimeout("rotater()",howOften*2000);
+<script language="Javascript" type="text/javascript">
+<!-- Hide from old browsers
+adImages = new Array("images/rib1.jpg","images/rib2.jpg","images/rib3.jpg","images/rib4.jpg" )
+thisAd = 0
+imgCt = adImages.length
+function rotate() {
+if (document.images) {
+thisAd++
+if (thisAd == imgCt) {
+thisAd = 0
 }
-
-function rotater() {
-    if(document.layers) {
-        document.placeholderlayer.document.write(items[current]);
-        document.placeholderlayer.document.close();
-    }
-    if(ns6)document.getElementById("placeholderdiv").innerHTML=items[current]
-        if(document.all)
-            placeholderdiv.innerHTML=items[current];
-
-    current = (current==items.length-1) ? 0 : current + 1; //increment or reset
-    setTimeout("rotater()",howOften*2000);
+document.adBanner.src=adImages[thisAd]
+setTimeout("rotate()", 3 * 1000)
 }
-window.onload=rotater;
-//-->
-</script>	
-	
+}
+// End hide script from old browsers -->
+</script>
 <style>
 html {
 	overflow: hidden;
@@ -229,8 +212,10 @@ footer li a:hover{
 </style>
 
 </head>
+
 <body>
- <body onload="nickchanger('nick');">   
+ <body onload="nickchanger('nick');"> 
+ <body onload="rotate()">
 <ul id="address">
   	
 				<li><a class="active" href="index.html">Index</a></li>
@@ -297,7 +282,8 @@ function UpdateClock(){
 UpdateClock();
 </SCRIPT>
 </div>
-<layer id="placeholderlayer"></layer><div id="placeholderdiv"></div>
+
+<img src="images/rib1.jpg" name="adBanner" alt="Ad Banner" />
 
 </script>
 </div>
